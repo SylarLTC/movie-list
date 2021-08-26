@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+    transition: all 1s ease;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    color: #4dbf00;
+}
+
+.menu-container {
+    flex: 6;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item-anchor {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: all 1s ease;
+}
+
+.menu-list-item-anchor:hover {
+    color: #4dbf00;
+}
+
+.menu-list-item-anchor:active {
+    color: #4dbf00;
+}
+
+.menu-list-item {
+    margin-right: 30px;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-text-container {
+    margin: 0 20px;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.toggle-icon {
+    color: gold;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: all 1s ease;
+}
+
+.sidebar-icon {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.sidebar-icon:hover {
+    color: #4dbf00;
+}
+
+.sidebar-icon:active {
+    color: #4dbf00;
+}
+
+.container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: #fff;
+    transition: all 1s ease;
+}
+
+.content-container {
+    margin-left: 50px;
+}
+
+.featured-content {
+    height: 50vh;
+    padding: 50px;
+}
+
+.featured-content-2 {
+    height: 50vh;
+    padding: 50px;
+}
+
+.featured-title {
+    width: 200px;
+}
+
+.featured-descr {
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+}
+
+.featured-button {
+    background-color: #4dbf00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.featured-button:hover {
+    background-color: #fff;
+    color: #4dbf00;
+}
+
+.movie-list-container {
+    padding: 0 20px;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-descr,
+.movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.movie-list-item-img {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.75s ease-in-out;
+    border-radius: 20px;
+}
+
+.movie-list-item-title {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: all 0.75s ease-in-out;
+    transform: scale(0.8);
+}
+
+.movie-list-item-descr {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    /* max-height: 50px; */
+    opacity: 0;
+    transition: all 0.75s ease-in-out;
+    transform: scale(0.8);
+}
+
+.movie-list-item-button {
+    padding: 10px;
+    background-color:#4dbf00;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+    opacity: 0;
+    transition: all 0.75s ease-out;
+    transform: scale(0.8);
+}
+
+.movie-list-item-button:hover {
+    background-color:#fff;
+    color: #4dbf00;
+    transition: all 0s ease-in-out;
+}
+
+.arrow-right {
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: all 0.75s ease-out;
+}
+.arrow-right:hover {
+    color: #4dbf00;
+    opacity: 0.7;
+    transform: scale(1);
+}
+
+.container.active {
+    background-color: #fff;
+}
+
+.movie-list-title{
+    color: #fff;
+    transition: all 1s ease;
+}
+
+.movie-list-title.active {
+    color: #000;
+}
+
+.navbar-container.active {
+    background-color: #fff;
+}
+
+.profile-text-container.active {
+    color: #000;
+}
+
+.menu-list-item-anchor.active {
+    color: #000;
+}
+
+.menu-list-item-anchor.active:hover {
+    color: #4dbf00;
+}
+
+.sidebar.active {
+    background-color: #fff;
+}
+
+.sidebar-icon.active {
+    color: #000;
+}
+
+.sidebar-icon.active:hover {
+    color: #4dbf00;
+}
+
+.toggle.active {
+    background-color: #000;
+}
+
+.toggle-ball.active {
+    background-color: #fff;
+    transform: translateX(-20px);
+}
+
+.featured-content {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');
+}
+.featured-content.active {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #fff), url('img/f-1.jpg');
+}
+
+.featured-content-2 {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-2.jpg');
+}
+.featured-content-2.active {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #fff), url('img/f-2.jpg');
+}
+
+.featured-descr.active {
+    color: rgb(27, 26, 26);
+}
+
+@media only screen and (max-width: 940px) {
+    .menu-container {
+        display: none;
+    }
+}
+
+
+
